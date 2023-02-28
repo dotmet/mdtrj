@@ -15,6 +15,7 @@ setup(
     zip_safe=False,
     python_requires=">=3.1",
     install_requires = [
+    'pypolymer',
     'matplotlib',
     'numpy',
     'scipy',
