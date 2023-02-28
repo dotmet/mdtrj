@@ -7,7 +7,7 @@ setup(
     version=__version__,
     author="Even Wong",
     author_email="evenwong@stu.cdut.edu.cn",
-    url="https://github.com/###",
+    url="https://github.com/dotmet/mdtrj",
     description="A trajectory parser",
     long_description="",
     extras_require={},
@@ -15,7 +15,6 @@ setup(
     zip_safe=False,
     python_requires=">=3.1",
     install_requires = [
-    'pypolymer',
     'matplotlib',
     'numpy',
     'scipy',
