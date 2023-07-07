@@ -140,7 +140,7 @@ class Trajectory(object):
         
         return _traj
         
-    def parse_boundary(self, center=False):
+    def parse_boundary(self, center=False, enable_tqdm=False):
         '''Read data from hoomd.trajecotry
         Parameters
         ----------
@@ -155,16 +155,27 @@ class Trajectory(object):
         box = self.topology.box
         
         _coords = []
-        
-        for i in tqdm(range(len(self.coords))):
-            _crds = self.coords[i]
-            crds = parse_boundary(_crds, bonds, box)
-            _coords.append(crds)
-        
-        if center:
-            for i in tqdm(range(len(_coords))):
-                _crds = _coords[i]
-                _coords[i] = _crds - np.mean(_crds, axis=0)
+
+        if enable_tqdm:
+            for i in tqdm(range(len(self.coords))):
+                _crds = self.coords[i]
+                crds = parse_boundary(_crds, bonds, box)
+                _coords.append(crds)
+            
+            if center:
+                for i in tqdm(range(len(_coords))):
+                    _crds = _coords[i]
+                    _coords[i] = _crds - np.mean(_crds, axis=0)
+        else:
+            for i in range(len(self.coords)):
+                _crds = self.coords[i]
+                crds = parse_boundary(_crds, bonds, box)
+                _coords.append(crds)
+            
+            if center:
+                for i in range(len(_coords)):
+                    _crds = _coords[i]
+                    _coords[i] = _crds - np.mean(_crds, axis=0)
                 
         self.coords = np.array(_coords, dtype=float)
         
