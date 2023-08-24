@@ -3,7 +3,7 @@ from mdtrj import Topology
 
 def read_gsd(gsd_fn):
     
-    with gsd.hoomd.open(gsd_fn, 'rb') as snaps:
+    with gsd.hoomd.open(gsd_fn, 'r') as snaps:
         topo = read_topology(snaps[0])
         coords = read_coords(snaps)
         velos = read_velos(snaps)

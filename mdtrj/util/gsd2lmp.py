@@ -85,7 +85,7 @@ class trjconvert:
         return trj_data
     
     def read_gsd(self):
-        return gsd.hoomd.open(self.infile, 'rb')
+        return gsd.hoomd.open(self.infile, 'r')
 
     def write_lammpstrj(self):
         snaps = self.read_gsd()

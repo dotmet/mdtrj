@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 gsd_fn = '20_10_1_v10.0.gsd'
 
-snaps = gsd.hoomd.open(gsd_fn)
+snaps = gsd.hoomd.open(gsd_fn, 'r')
 
 trj = load(gsd_fn, parse_bound=True, iter=True)
 

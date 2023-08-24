@@ -6,7 +6,7 @@ import warnings
 
 def read_gsd_file(gsd_fn, read_velo=False, start=0, end=None, skip=1):
 
-    with gsd.hoomd.open(gsd_fn, 'rb') as snaps:
+    with gsd.hoomd.open(gsd_fn, 'r') as snaps:
         
         topo = Topology()
         
