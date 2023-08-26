@@ -2,6 +2,9 @@ from setuptools import setup, find_packages
 
 __version__ = "0.0.1"
 
+with open('README.md', 'r', encoding='utf-8') as fh:
+    long_description = fh.read()
+
 setup(
     name="MDTrj",
     version=__version__,
@@ -9,7 +12,7 @@ setup(
     author_email="evenwong@stu.cdut.edu.cn",
     url="https://github.com/dotmet/mdtrj",
     description="A trajectory parser",
-    long_description="",
+    long_description=long_description,
     extras_require={},
     packages = find_packages(),
     zip_safe=False,
