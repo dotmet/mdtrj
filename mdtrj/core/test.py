@@ -1,4 +1,4 @@
-from trajectory import *
+from .trajectory import *
 
 import gsd.hoomd
 import matplotlib.pyplot as plt
