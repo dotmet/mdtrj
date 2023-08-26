@@ -1,5 +1,5 @@
 # mdtrj
-A pack.
+A md tool package.
 
 # Installation
 
