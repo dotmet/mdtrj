@@ -12,3 +12,4 @@ tqdm
 gsd
 matplotlib
 scipy
+mpcmd
