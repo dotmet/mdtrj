@@ -12,6 +12,7 @@ setup(
     author_email="evenwong@stu.cdut.edu.cn",
     url="https://github.com/dotmet/mdtrj",
     description="A trajectory parser",
+    long_description_content_type='text/markdown',
     long_description=long_description,
     extras_require={},
     packages = find_packages(),
