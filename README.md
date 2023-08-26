@@ -1,5 +1,5 @@
 # mdtrj
-Analyze the trajectory of molecular dynamics simulation
+A MD trajectory analysis tool.
 
 # Installation
 
