@@ -8,3 +8,7 @@ sphinx
 furo
 tornado
 sphinx_rtd_theme
+dqdm
+gsd
+matplotlib
+scipy
