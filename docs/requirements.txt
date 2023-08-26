@@ -7,3 +7,4 @@ pandoc
 sphinx
 furo
 tornado
+sphinx_rtd_theme
